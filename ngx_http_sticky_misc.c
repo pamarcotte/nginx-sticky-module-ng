@@ -9,6 +9,8 @@
 #include <ngx_http.h>
 #include <ngx_md5.h>
 #include <ngx_sha1.h>
+#include <openssl/sha.h>
+#include <openssl/md5.h>
 
 #include "ngx_http_sticky_misc.h"
 
@@ -359,4 +361,3 @@ ngx_int_t ngx_http_sticky_misc_text_sha1(ngx_pool_t *pool, struct sockaddr *in, 
 
   return ngx_pfree(pool, &str);
 }
-
